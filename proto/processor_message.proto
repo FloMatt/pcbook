@@ -1,4 +1,7 @@
 syntax = "proto3";
+option go_package = "/home/matt/go";
+
+
 message CPU {
     string brand = 1;
     string name=2;

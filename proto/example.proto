@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package example;
+option go_package="/home/matt/go";
+
+// Define a simple message with two fields: id and name
+message Person {
+  int32 id = 1;
+  string name = 2;
+}
