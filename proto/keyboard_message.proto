@@ -1,6 +1,7 @@
 syntax = "proto3";
-option go_package = "/home/matt/go";
 package matt.pcbook;
+option go_package = "/home/matt/go";
+
 
 message Keyboard{
     enum Layout{

@@ -4,13 +4,26 @@ package matt.pcbook;
 import "processor_message.proto";
 import "memory_message.proto";
 import "storage_message.proto";
+import "screen_message.proto";
+import "keyboard_message.proto";
+import "google/protobuf/timestamp.proto";
 
 message Laptop{
     string id = 1;
     string brand = 2;
     string name = 3;
     CPU cpu = 4;
-    Memory memory = 5;
+    Memory ram = 5;
     repeated GPU gpus = 6;
     repeated Storage storages = 7;
+    Screen screen =8;
+    Keyboard keyboard = 9;
+    oneof weight{
+        double weightkg = 10;
+        double weightlb = 11;
+    }
+    double price_usd=12;
+    uint32 release_yr = 13;
+    google.protobuf.Timestamp updated_at = 14;
+
 }
